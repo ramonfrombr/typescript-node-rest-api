@@ -2,7 +2,7 @@ import express from 'express';
 import { criarUsuario, selecionarUsuarioPeloEmail } from '../db/usuarios';
 import { aleatorio, autenticacao } from '../auxiliares';
 
-export const register = async (pedido: express.Request, resposta: express.Response) => {
+export const registrar = async (pedido: express.Request, resposta: express.Response) => {
     try {
         const {email, senha, nome_usuario} = pedido.body;
 
