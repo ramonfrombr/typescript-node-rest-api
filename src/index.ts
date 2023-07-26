@@ -4,6 +4,11 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+
+
+dotenv.config();
 
 const app = express();
 
@@ -19,4 +24,9 @@ const servidor  = http.createServer(app);
 
 servidor.listen(8080, () => {
     console.log("Servidor rodando no endereço http://localhost:8080/")
+    console.log("MongoDB credencial: " + process.env.MONGODB_CREDENCIAL)
 })
+
+mongoose.Promise = Promise;
+mongoose.connect(process.env.MONGODB_CREDENCIAL)
+mongoose.connection.on('error', (erro: Error) => console.log(erro))
