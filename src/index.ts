@@ -6,7 +6,7 @@ import compression from 'compression';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-
+import {autenticacao} from './auxiliares'
 
 dotenv.config();
 
@@ -24,7 +24,8 @@ const servidor  = http.createServer(app);
 
 servidor.listen(8080, () => {
     console.log("Servidor rodando no endereço http://localhost:8080/")
-    console.log("MongoDB credencial: " + process.env.MONGODB_CREDENCIAL)
+    const senha_hash = autenticacao("abc", "123")
+    console.log(senha_hash)
 })
 
 mongoose.Promise = Promise;
