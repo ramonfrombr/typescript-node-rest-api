@@ -7,6 +7,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import {autenticacao} from './auxiliares'
+import rotas from './rotas';
 
 dotenv.config();
 
@@ -31,3 +32,5 @@ servidor.listen(8080, () => {
 mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGODB_CREDENCIAL)
 mongoose.connection.on('error', (erro: Error) => console.log(erro))
+
+app.use('/', rotas());
