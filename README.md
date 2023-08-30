@@ -5,4 +5,4 @@ Português: Este é o repositório com o código do meu tutorial sobre como cria
 English: This is the repository code for my tutorial on how to create a RestAPI using TypeScript, NodeJS, and MongoDB.
 
 ### Tutorial
-[![Tutorial Rest API TypeScript NodeJS](https://img.youtube.com/vi/jdSm-3cFsMg/0.jpg)](https://www.youtube.com/watch?v=jdSm-3cFsMg)
+[![Tutorial Rest API TypeScript NodeJS](https://img.youtube.com/vi/1loPW0w2v7w/0.jpg)](https://www.youtube.com/watch?v=1loPW0w2v7w)
